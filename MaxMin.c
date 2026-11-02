@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[10];
+    int len=sizeof(a)/sizeof(int);
+    int max=0;
+    int min=0;
+
+
+    for(int i=0; i<len; i++)
+    {
+        printf("Enter marks of %dth student: ", i+1);
+        scanf("%d", &a[i]);
+        
+        if(a[max]<a[i])
+        {
+            max=i;
+        }
+
+        if(a[min]>a[i])
+        {
+            min=i;
+        }
+    }
+
+    printf("\n%dth student scored maximum marks", max+1);
+    printf("\n%dth student scored minimum marks", min+1);
+
+
+    return 0;
+}
